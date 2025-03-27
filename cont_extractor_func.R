@@ -44,6 +44,20 @@ contour_extractor <- function(analysis, max = length(xl[[analysis]])) {
     select(id,start_de,end_de,length_mm_de,start_t,end_t,length_mm_t,start_pe,end_pe,length_mm_pe) %>%
     mutate(across(2:10, as.numeric))
 
+  # Tilføjer radiant analyse (xxx final+pre)
+  source("Scripts/qcu extractor scripts/Extract radiant.R")
+  if (analysis == "final") {
+    final_radiant_xxx_full <- final_radiant_xxx_full()
+    output$segments <- bind_rows(output$segments,final_radiant_xxx_full$segments)
+    output$cont <- bind_rows(output$cont,final_radiant_xxx_full$cont)
+    output$stat_cont <- bind_rows(output$stat_cont,final_radiant_xxx_full$stat_cont)
+  } else if (analysis == "pre") {
+    pre_radiant_xxx_full <- pre_radiant_xxx_full()
+    output$segments <- bind_rows(output$segments,pre_radiant_xxx_full$segments)
+    output$cont <- bind_rows(output$cont,pre_radiant_xxx_full$cont)
+    output$stat_cont <- bind_rows(output$stat_cont,pre_radiant_xxx_full$stat_cont)
+  }
+  
   # Tilføjer splittede excels
   source("Scripts/qcu extractor scripts/Extract split excel.R")
   if (analysis == "final") {

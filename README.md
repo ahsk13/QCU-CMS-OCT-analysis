@@ -3,6 +3,8 @@ R and python scripts to assist in OCT core laboratory analysis
 
 The following R scripts help with OCT datamanagement after export of excel sheets from QCU-CMS:
 
+  0. init.R includes libraries used.
+
   1. import_qcu_excels.R loops over all excel file names to ensure consistency.
   
   2. cont_extractor_func.R loops over all excel sheets and extracts lumen and stent contours, segments, and calculates summary statistics for each segment. This function also handles split excels (i.e., prox excel and dist excel), and radiant analyses.

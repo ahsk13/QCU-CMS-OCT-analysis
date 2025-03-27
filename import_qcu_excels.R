@@ -1,3 +1,5 @@
+# R script to check consistency of excel names
+
 path = "..."
 
 # XXX er et patient id som er anonymiseret.

@@ -1,4 +1,4 @@
-# OCT-core-laboratory
+# Optimizing QCU-CMS OCT core laboratory analysis
 R and python scripts to assist in OCT core laboratory analysis
 
 The following R scripts help with OCT datamanagement after export of excel sheets from QCU-CMS:

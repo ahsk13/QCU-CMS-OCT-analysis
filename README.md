@@ -16,9 +16,15 @@ The following R scripts (R version 4.4.1) help with OCT datamanagement after exp
   5. plaque_extractor_func.R loops over all excel sheets to extract plaque angles, plaque type, and calcium thickness. This function also handles split excels (i.e., prox excel and dist excel), and radiant analyses.  
 
 The following python scripts help with OCT analysis in QCU-CMS:
-  1. XXX
+  1. ocr_master.py starts the master scripts to be able to control the rest of the scripts from within QCU-CMS.
 
-  2. XXX
+  2. init_analysis.py helps align OCT windows and intitialize analysis (automatically insert run settings)
+     
+  3. add_angle_py helps reduce redundancy in clicking -> makes adding plaque angles and plaque types much faster.
+     
+  4. add_strut_area.py removes unnecessary click in adding struts and stent areas.
+  
+  5. Python scripts 3 and 4 works with ocr_functions.py by using optical character recognitition to know where to automate clicks.
 
 Frame-by-frame pairing of pre-stent OCT and post-procedure OCT can be found in the folder "pairing between pre and post OCT"
   1. extract analyzed frames_gh.R extracts all analyzed frames on both pullbacks
